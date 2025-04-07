@@ -1,1 +1,12 @@
+@font-face {
+  font-family: "Norse";
+  src: url("../fonts/norse.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import "tailwindcss";
+
+@theme {
+  --font-logo: "Norse", "sans-serif";
+}
