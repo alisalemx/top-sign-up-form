@@ -5,6 +5,14 @@
   font-style: normal;
 }
 
+a {
+  text-decoration-line: underline;
+}
+
+h1 a {
+  text-decoration-line: none;
+}
+
 @import "tailwindcss";
 
 @theme {
