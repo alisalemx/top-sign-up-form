@@ -19,14 +19,20 @@ h1 a {
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-8xl: 6rem;
     --text-8xl--line-height: 1;
     --font-weight-normal: 400;
+    --font-weight-semibold: 600;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-logo: "Norse", "sans-serif";
@@ -218,26 +224,48 @@ h1 a {
       background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
     }
   }
+  .bg-gray-100 {
+    background-color: var(--color-gray-100);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
   .bg-\[url\(\.\.\/images\/sidebar\.jpg\)\] {
     background-image: url(../images/sidebar.jpg);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  .px-40 {
+    padding-inline: calc(var(--spacing) * 40);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
+  .pt-56 {
+    padding-top: calc(var(--spacing) * 56);
+  }
+  .pt-60 {
+    padding-top: calc(var(--spacing) * 60);
+  }
   .pt-64 {
     padding-top: calc(var(--spacing) * 64);
   }
-  .pt-72 {
-    padding-top: calc(var(--spacing) * 72);
-  }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pb-12 {
+    padding-bottom: calc(var(--spacing) * 12);
   }
   .text-center {
     text-align: center;
   }
   .font-logo {
     font-family: var(--font-logo);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-8xl {
     font-size: var(--text-8xl);
@@ -247,6 +275,10 @@ h1 a {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
@@ -254,6 +286,10 @@ h1 a {
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
   }
   .text-white {
     color: var(--color-white);
@@ -267,8 +303,15 @@ h1 a {
   .uppercase {
     text-transform: uppercase;
   }
-  .no-underline {
-    text-decoration-line: none;
+  .\[\&_p\]\:mb-4 {
+    & p {
+      margin-bottom: calc(var(--spacing) * 4);
+    }
+  }
+  .\[\&_p\]\:mb-20 {
+    & p {
+      margin-bottom: calc(var(--spacing) * 20);
+    }
   }
 }
 @property --tw-translate-x {
